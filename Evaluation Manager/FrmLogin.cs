@@ -32,7 +32,10 @@ namespace Evaluation_Manager
             {
                 if (txtUsername.Text == username && txtPassword.Text == passowrd)
                 {
-                    MessageBox.Show("Dobrodosli!", "Prijavljeni ste", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FrmStudents frmStudents = new FrmStudents();
+                    Hide();
+                    frmStudents.ShowDialog();
+                    Close();
                 }
                 else
                 {
