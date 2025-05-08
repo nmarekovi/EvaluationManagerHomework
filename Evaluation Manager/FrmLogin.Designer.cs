@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            txtUsername = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            textBox2 = new TextBox();
+            txtPassword = new TextBox();
             button1 = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txtUsername
             // 
-            textBox1.Location = new Point(129, 23);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtUsername.Location = new Point(129, 23);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(100, 23);
+            txtUsername.TabIndex = 0;
+            txtUsername.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
@@ -62,13 +62,13 @@
             label2.Text = "Lozinka:";
             label2.Click += label2_Click;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.Location = new Point(129, 52);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 2;
-            textBox2.UseSystemPasswordChar = true;
+            txtPassword.Location = new Point(129, 52);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(100, 23);
+            txtPassword.TabIndex = 2;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // button1
             // 
@@ -78,6 +78,7 @@
             button1.TabIndex = 4;
             button1.Text = "Prijava";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // FrmLogin
             // 
@@ -86,25 +87,26 @@
             ClientSize = new Size(291, 154);
             Controls.Add(button1);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(txtPassword);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txtUsername);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FrmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmLogin";
+            Load += FrmLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txtUsername;
         private Label label1;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtPassword;
         private Button button1;
     }
 }
